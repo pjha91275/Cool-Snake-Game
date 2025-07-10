@@ -25,13 +25,20 @@
 }
 
 .head{
-    background-color : red;
+    background-color : linear-gradient(red, yellow);
+    border : 2px solid purple;
+    transform : scale(1.02);
+    border-radius : 9px;
 }
 
-.body{
+.snake{
     background-color : purple;
+    border : .25vmin solid white;
+    border-radius : 12px;
 }
 
 .food{
-    background-color : yellow;
+    background-color : linear-gradient(red, purple);
+    border : .254vmin solid black;
+    border-radius : 8px;
 }

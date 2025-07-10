@@ -34,7 +34,7 @@ if(snakeArr[0].y === food.y && snakeArr[0].x === food.x ){
 
 // Moving the snake
 for(let i = snakeArr.length - 2; i>=0; i--){
-    const element = array[i];
+
     snakeArr[i+1] = {...snakeArr[i]};
 }
 
@@ -43,9 +43,13 @@ snakeArr[0].y += inputDir.y
     
 function isCollide(snake){
     // if you bump into yourself
-    for (let i = 0; i < snakeArr.length; i++) {
+    for (let i = 1; i < snakeArr.length; i++) {
        if(snake[i].x === snake[0].x && snake[i].y === snake[0].y)
-        return false;
+        return true;
+    }
+    //if you bump into the wall
+    if(snake[0].x >= 18 || snake[0].x <= 0 || snake[0].y >= 18 || snake[0].y <= 10){
+        return true;
     }
 }
 
