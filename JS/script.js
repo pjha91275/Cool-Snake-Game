@@ -142,4 +142,42 @@ window.addEventListener('keydown', e =>{
         default : 
            break;
     }
-})
+});
+
+let up = document.querySelector(".up");
+up.addEventListener("click", () => {
+    moveSound.play();
+    inputDir.x = 0;
+    inputDir.y = -1;
+});
+
+let down = document.querySelector(".down");
+down.addEventListener("click", () => {
+    moveSound.play();
+    inputDir.x = 0;
+    inputDir.y = 1;
+});
+
+let left = document.querySelector(".left");
+left.addEventListener("click", () => {
+    moveSound.play();
+    inputDir.x = -1;
+    inputDir.y = 0;
+});
+
+let right = document.querySelector(".right");
+right.addEventListener("click", () => {
+    moveSound.play();
+    inputDir.x = 1;
+    inputDir.y = 0;
+});
+
+let center = document.querySelector(".center");
+center.addEventListener("click", () => {
+    if (musicSound.paused) {
+        musicSound.play();
+    } 
+    else {
+        musicSound.pause();
+    }
+});
