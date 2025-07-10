@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=New+Tegomin&family=Roboto:wght@705&display=swap');
+
 *{
     margin : 0;
     padding : 0;
 }
-
 
 .body{
     background : url("/image/bg.jpg");
@@ -12,6 +13,24 @@
     display : flex;
     justify-content : center;
     align-items: center;
+}
+
+#scoreBox{
+    position : absolute;
+    top : 9px;
+    right : 200px;
+    font-size : 39px;
+    font-weight : bold;
+    font-family: "New Tegomin", serif;
+}
+
+#hiscoreBox{
+    position : absolute;
+    top : 59px;
+    right : 170px;
+    font-size : 39px;
+    font-weight : bold;
+    font-family: "New Tegomin", serif;
 }
 
 #board{
@@ -25,8 +44,8 @@
 }
 
 .head{
-    background-color : linear-gradient(red, yellow);
-    border : 2px solid purple;
+    background : linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+    border : 2px solid rgb(34, 4, 34);
     transform : scale(1.02);
     border-radius : 9px;
 }
@@ -38,7 +57,7 @@
 }
 
 .food{
-    background-color : linear-gradient(red, purple);
+    background : linear-gradient(red, purple);
     border : .254vmin solid black;
     border-radius : 8px;
 }
