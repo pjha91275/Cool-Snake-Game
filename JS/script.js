@@ -148,13 +148,16 @@ window.addEventListener('keydown', e =>{
     }
 });
 
-let key = document.querySelector(".key");
-key.addEventListener("click", () => {
-   if (!musicStarted) {
-        musicSound.play();
-        musicStarted = true;
-    }
+let keys = document.querySelectorAll(".key");
+keys.forEach(key => {
+    key.addEventListener("click", () => {
+        if (!musicStarted) {
+            musicSound.play();
+            musicStarted = true;
+        }
+    });
 });
+
 
 let up = document.querySelector(".up");
 up.addEventListener("click", () => {
