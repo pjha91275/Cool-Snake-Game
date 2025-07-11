@@ -18,28 +18,28 @@
 
 #scoreBox{
     position : absolute;
-    top : 9px;
-    right : 200px;
-    font-size : 39px;
+    top : 1vh;
+    right : 8vw;
+    font-size : 2.5rem;
     font-weight : bold;
     font-family: "New Tegomin", serif;
 }
 
 #hiscoreBox{
     position : absolute;
-    top : 59px;
-    right : 170px;
-    font-size : 39px;
+    top : 6vh;
+    right : 8vw;
+    font-size : 2.5rem;
     font-weight : bold;
     font-family: "New Tegomin", serif;
 }
 
 #board{
     background: linear-gradient(to bottom, #246b8a, #204753, #295568);
-    width : 90vmin;
-    height : 92vmin;
+    width : 45vw;
+    height : 90vh;
     border: 2px solid #5fdbc2;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     display : grid;
     grid-template-rows: repeat(18, 1fr);
     grid-template-columns: repeat(18, 1fr);
@@ -49,32 +49,36 @@
     background: linear-gradient(135deg, #ed1924, #f6a7e7);
     border: 2px solid #ffffff;
     transform : scale(1.02);
-    border-radius : 9px;
+    border-radius : 0.6rem;
     box-shadow: 0 0 8px #d13ab3;
 }
 
 .snake{
     background-color: rgb(0, 255, 135, 1);
     border: 1px solid #133b38;
-    border-radius : 12px;
+    border-radius : 0.7rem;
     box-shadow: 0 0 6px #00ffcc;
 }
 
 .food{
     background: linear-gradient(145deg, #f1cc37, #f39154);
     border: 1px solid #fff;
-    border-radius : 8px;
+    border-radius : 0.5rem;
     box-shadow: 0 0 8px #efa641;
 }
 
-.navButtons{
+#navButtons{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     position: absolute;
-    right: 150px;
+    right: 6vw;
     top: 50%;
     gap: 10px;
+}
+
+.key{
+    border-radius : 0.25rem;
 }
 
 .key img {
@@ -116,23 +120,52 @@
     transform: scale(1.1);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1300px) {
     body {
          background: linear-gradient(40deg, #6f2e88, #0c3db6);
          flex-direction : column;
-}
+    }
 
     .body {
         min-height: 82vh;
     }
 
-    .board {
+    #scoreBox{
+       display: flex;
+        width: 86vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hiscoreBox{
+       display: flex;
+        width: 86vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #boardBox{
+       display : flex;
+       width: 86vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #board {
         width: 86vw;
         height: 48vh;
     }
 
-    .navButtons {
-        right: 110px;
-        top: 72%;
+    #navBox{
+        display : flex;
+        width: 86vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #navButtons{
+        position: static;
+       right: auto;
+       top: auto;
     }
 }
