@@ -4,6 +4,7 @@ const foodSound = new Audio('music/food.mp3');
 const gameOverSound = new Audio('music/gameover.mp3');
 const moveSound = new Audio('music/move.mp3')
 const musicSound = new Audio('music/music.mp3');
+let musicStarted = false;
 const speed = 5;
 let score = 0;
 let lastPaintTime = 0;
@@ -111,14 +112,17 @@ if(hiscore === null){
 }
 else{
     hiscoreval = JSON.parse(hiscore);
-    hiscoreBox.innerHTML = "HiScore: " + hiscoreval;
+    hiscoreBox.innerHTML = "HiScore : " + hiscoreval;
 }
 
 
 window.requestAnimationFrame(main);
 window.addEventListener('keydown', e =>{
     inputDir = {x : 0, y : 1} //Start the game
-    moveSound.play();
+    if (!musicStarted) {
+        musicSound.play();
+        musicStarted = true;
+    }
     switch (e.key){
         case "ArrowUp" :
             inputDir.x = 0;
@@ -141,6 +145,14 @@ window.addEventListener('keydown', e =>{
             break;
         default : 
            break;
+    }
+});
+
+let key = document.querySelector(".key");
+key.addEventListener("click", () => {
+   if (!musicStarted) {
+        musicSound.play();
+        musicStarted = true;
     }
 });
 
