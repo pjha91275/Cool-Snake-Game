@@ -158,7 +158,6 @@ keys.forEach(key => {
     });
 });
 
-
 let up = document.querySelector(".up");
 up.addEventListener("click", () => {
     moveSound.play();

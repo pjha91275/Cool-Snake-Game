@@ -178,3 +178,9 @@
     height: 60px;
 }
 }
+
+@media (max-height: 1000px) {
+    #board {
+        height: 50vh;
+    }
+}
